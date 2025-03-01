@@ -25,6 +25,7 @@
 	/* Font Size */
 	--sm-fs: 0.825rem;
 	--base-fs: 1rem;
+	--lg-fs: 1.25rem;
 	--xl-fs: 1.525rem;
 	--xxl-fs: 2.425rem;
 
@@ -43,7 +44,12 @@
 	--alt-lg: linear-gradient(
 		to top,
 		var(--black-color-10),
-		var(--black-color-40)
+		var(--black-color-40) 50%
+	);
+	--hover-lg: linear-gradient(
+		to top,
+		var(--black-color-10),
+		var(--white-color-10) 45%
 	);
 }
 
@@ -64,6 +70,7 @@ body {
 	overflow-x: hidden;
 	background-color: var(--black-color-10);
 	color: var(--white-color-10);
+	position: relative;
 }
 
 :is(h1, h2, h3, h4, h5, h6) {
@@ -120,6 +127,61 @@ img {
 	justify-content: center;
 	align-items: center;
 }
+
+.logo {
+	background-color: var(--white-color-10);
+	width: fit-content;
+	height: fit-content;
+	padding: 0.35rem;
+	border-radius: var(--btn-radius);
+	opacity: 0.85;
+}
+
+.logo-img {
+	width: 28px;
+}
+
+.logo:hover {
+	opacity: 1;
+	transform: scale(1.08);
+}
+
+/***************** NAVBAR *******************/
+#navbar {
+	height: 80px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.navbar-content {
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.navbar-menu {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.navbar-link {
+	font-weight: var(--bold-fw);
+	background-image: var(--alt-lg);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-size: var(--lg-fs);
+}
+
+.navbar-link:hover,
+.navbar-link.active {
+	background-image: var(--hover-lg);
+}
+/************** End of NAVBAR ***************/
 
 /***************** HOME *******************/
 /* TODO: Create HOME style */
