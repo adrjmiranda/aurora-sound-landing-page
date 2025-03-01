@@ -28,6 +28,8 @@
 	--lg-fs: 1.25rem;
 	--xl-fs: 1.525rem;
 	--xxl-fs: 2.425rem;
+	--xxxl-fs: 3.595rem;
+	--xxxxl-fs: 4.395rem;
 
 	/* Border Radius */
 	--btn-radius: 0.35rem;
@@ -35,10 +37,13 @@
 
 	/* Padding */
 	--container-pi: 0.85rem;
-	--section-pb: 3.5rem;
+	--section-pb: 4.25rem;
 
 	/* Width */
 	--container-mw: 1024px;
+
+	/* Height */
+	--navbar-h: 98px;
 
 	/* Gradient */
 	--alt-lg: linear-gradient(
@@ -93,8 +98,15 @@ input {
 	background-color: transparent;
 }
 
+input {
+	border-radius: var(--input-radius);
+}
+
 button {
 	transition: 0.45s ease-in-out;
+	border-radius: var(--btn-radius);
+	cursor: pointer;
+	width: 150%;
 }
 
 img {
@@ -117,6 +129,9 @@ img {
 .section-title {
 	font-size: var(--xxl-fs);
 	font-weight: var(--normal-fw);
+	text-align: center;
+	margin-bottom: 3.25rem;
+	text-transform: capitalize;
 }
 
 .flex-center {
@@ -155,13 +170,50 @@ img {
 	-webkit-text-fill-color: transparent;
 }
 
+.grid {
+	display: grid;
+}
+
+.grid-2 {
+	grid-template-columns: repeat(2, 1fr);
+	gap: 2.75rem;
+}
+
+.grid-3 {
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1.25rem;
+}
+
+.btn,
+.btn i {
+	color: var(--white-color-10);
+	font-size: var(--base-fs);
+	font-weight: var(--light-fw);
+}
+
+.btn {
+	padding: 0.85rem;
+	width: fit-content;
+	text-transform: uppercase;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.55rem;
+	text-align: center;
+	background-color: var(--black-color-30);
+}
+
+.btn:hover {
+	background-color: var(--black-color-20);
+}
+
 /***************** NAVBAR *******************/
 #navbar {
-	height: 98px;
-	position: absolute;
+	height: var(--navbar-h);
 	top: 0;
 	left: 0;
 	width: 100%;
+	background-color: transparent;
 }
 
 .navbar-content {
@@ -190,7 +242,65 @@ img {
 /************** End of NAVBAR ***************/
 
 /***************** HOME *******************/
-/* TODO: Create HOME style */
+.home-content {
+	align-items: center;
+}
+
+.home-img {
+	position: relative;
+	height: 100%;
+}
+
+.home-img img {
+	position: absolute;
+	top: -48%;
+	left: -10%;
+	height: 180%;
+	filter: drop-shadow(1px 1px 25px rgba(255, 255, 255, 0.05));
+	opacity: 0.6;
+}
+
+.home-text {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	position: relative;
+}
+
+.home-title,
+.home-subtitle {
+	text-transform: capitalize;
+}
+
+.home-title {
+	font-size: var(--xxxl-fs);
+	z-index: 20;
+}
+
+.home-subtitle {
+	font-size: var(--xxxxl-fs);
+	position: absolute;
+	left: 20%;
+	top: -12%;
+	z-index: 10;
+}
+
+.home-overview {
+	display: flex;
+	flex-direction: column;
+	gap: 1.25rem;
+}
+
+.home-overview-title {
+	font-size: var(--xl-fs);
+	text-transform: uppercase;
+}
+
+.home-overview-description {
+	font-weight: var(--light-fw);
+	font-size: var(--base-fs);
+	line-height: 1.8;
+}
 /************** End of HOME ***************/
 
 /***************** FEATURES *******************/
