@@ -131,16 +131,21 @@ img {
 	height: fit-content;
 	padding: 0.35rem;
 	border-radius: var(--btn-radius);
-	opacity: 0.85;
+	transform: rotate(-45deg);
 }
 
 .logo-img {
 	width: 28px;
+	transform: rotate(45deg);
+	transition: 0.35s ease-in-out;
 }
 
 .logo:hover {
-	opacity: 1;
-	transform: scale(1.08);
+	transform: scale(1.08) rotate(0);
+}
+
+.logo:hover .logo-img {
+	transform: rotate(0);
 }
 
 .text-gradient {
@@ -152,7 +157,7 @@ img {
 
 /***************** NAVBAR *******************/
 #navbar {
-	height: 80px;
+	height: 98px;
 	position: absolute;
 	top: 0;
 	left: 0;
