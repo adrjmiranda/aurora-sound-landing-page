@@ -47,7 +47,7 @@
 	--navbar-h: 98px;
 
 	/* Shadow */
-	--img-ds: drop-shadow(1px 1px 25px rgba(255, 255, 255, 0.05));
+	--white-ds: drop-shadow(1px 1px 25px rgba(255, 255, 255, 0.05));
 
 	/* Gradient */
 	--alt-lg: linear-gradient(
@@ -209,6 +209,7 @@ img {
 
 .btn:hover {
 	background-color: var(--black-color-20);
+	filter: var(--white-ds);
 }
 
 /***************** NAVBAR *******************/
@@ -260,7 +261,7 @@ img {
 	top: -48%;
 	left: -5%;
 	height: 180%;
-	filter: var(--img-ds);
+	filter: var(--white-ds);
 	object-fit: cover;
 }
 
@@ -333,7 +334,7 @@ img {
 
 .feature-item:nth-child(even) {
 	margin-left: 3.75rem;
-	filter: var(--img-ds);
+	filter: var(--white-ds);
 }
 
 .feature-item i {
@@ -342,7 +343,7 @@ img {
 	background-color: var(--black-color-20);
 	border-radius: 50%;
 	height: 64px;
-	filter: var(--img-ds);
+	filter: var(--white-ds);
 	width: 64px;
 }
 
@@ -352,12 +353,35 @@ img {
 
 .features-img {
 	opacity: 0.55;
-	filter: var(--img-ds);
+	filter: var(--white-ds);
 }
 /************** End of FEATURES ***************/
 
 /***************** CASE *******************/
-/* TODO: Create CASE style */
+.case-content {
+	align-items: center;
+}
+
+.case-img {
+	filter: var(--white-ds);
+}
+
+.case-img img {
+	filter: grayscale(0.25);
+}
+
+.case-text {
+	display: flex;
+	flex-direction: column;
+	gap: 1.65rem;
+}
+
+.case-description {
+	font-size: var(--lg-fs);
+	line-height: 1.7;
+	font-weight: var(--light-fw);
+	color: var(--white-color-10);
+}
 /************** End of CASE ***************/
 
 /***************** PROMOTION *******************/
