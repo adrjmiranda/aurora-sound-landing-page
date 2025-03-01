@@ -35,6 +35,7 @@
 	--btn-radius: 0.35rem;
 	--input-radius: 0.35rem;
 	--feat-radius: 2.85rem;
+	--promo-radius: 2.85rem;
 
 	/* Padding */
 	--container-pi: 0.85rem;
@@ -303,7 +304,7 @@ img {
 
 .home-overview-description {
 	font-weight: var(--light-fw);
-	font-size: var(--base-fs);
+	font-size: var(--lg-fs);
 	line-height: 1.8;
 }
 /************** End of HOME ***************/
@@ -385,7 +386,41 @@ img {
 /************** End of CASE ***************/
 
 /***************** PROMOTION *******************/
-/* TODO: Create PROMOTION style */
+.promotion-content {
+	background-color: var(--black-color-20);
+	align-items: center;
+	padding: 1.25rem 2.85rem;
+	border-radius: var(--promo-radius);
+	filter: var(--white-ds);
+}
+
+.promotion-text {
+	display: flex;
+	flex-direction: column;
+	gap: 1.25rem;
+}
+
+.promotion-title {
+	font-size: var(--xxl-fs);
+	text-transform: capitalize;
+}
+
+.promotion-subtitle {
+	font-size: var(--xl-fs);
+	text-transform: uppercase;
+}
+
+.promotion-img {
+	height: 350px;
+	justify-self: center;
+}
+
+.promotion-img img {
+	height: 100%;
+	filter: grayscale(0.55);
+	opacity: 0.55;
+	filter: var(--white-ds);
+}
 /************** End of PROMOTION ***************/
 
 /***************** PRODUCTS *******************/
