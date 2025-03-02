@@ -211,6 +211,7 @@ img {
 	gap: 0.55rem;
 	text-align: center;
 	background-color: var(--black-color-30);
+	font-weight: var(--normal-fw);
 }
 
 .btn:hover {
@@ -255,6 +256,12 @@ img {
 /************** End of NAVBAR ***************/
 
 /***************** HOME *******************/
+#home {
+	min-height: calc(100vh - var(--navbar-h));
+	display: flex;
+	align-items: center;
+}
+
 .home-content {
 	align-items: center;
 }
@@ -271,6 +278,7 @@ img {
 	height: 180%;
 	filter: var(--white-ds);
 	object-fit: cover;
+	opacity: 0.45;
 }
 
 .home-text {
