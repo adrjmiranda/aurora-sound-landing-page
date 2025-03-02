@@ -223,12 +223,10 @@ img {
 /***************** NAVBAR *******************/
 #navbar {
 	height: var(--navbar-h);
-	top: 0;
-	left: 0;
-	width: 100%;
 	background-color: transparent;
 	position: relative;
 	z-index: 100;
+	transition: 0.55s ease-in-out;
 }
 
 .navbar-content {
@@ -236,6 +234,12 @@ img {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+}
+
+#toggle-menu {
+	color: var(--white-color-10);
+	font-size: var(--xxxl-fs);
+	display: none;
 }
 
 .navbar-menu {
@@ -647,5 +651,89 @@ img {
 /************** End of CREDIT AREA ***************/
 
 /***************** Responsiveness *******************/
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
+	/***************** Variables *******************/
+	:root {
+		font-size: 14.5px;
+	}
+
+	/***************** HOME *******************/
+	.home-img img {
+		position: relative;
+		height: 100%;
+		inset: 0;
+	}
+	/************** End of HOME ***************/
+}
+
+@media screen and (max-width: 860px) {
+	/***************** Variables *******************/
+	:root {
+		font-size: 15px;
+
+		/* Font Size */
+		--sm-fs: 0.75rem;
+		--base-fs: 1rem;
+		--lg-fs: 1.25rem;
+		--xl-fs: 1.5rem;
+		--xxl-fs: 2rem;
+		--xxxl-fs: 2.5rem;
+		--xxxxl-fs: 3rem;
+	}
+
+	/***************** General *******************/
+	*.show {
+		display: flex !important;
+	}
+
+	*.hidden {
+		display: none !important;
+	}
+
+	/***************** Resusable *******************/
+	.logo {
+		margin-left: var(--container-pi);
+	}
+
+	/***************** NAVBAR *******************/
+	#navbar {
+		height: auto;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		border-radius: 2.15rem;
+	}
+
+	#navbar.active {
+		background-color: rgba(0, 0, 0, 0.85);
+	}
+
+	.navbar-content {
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.navbar-content {
+		padding-block: 1.5rem;
+	}
+
+	#toggle-menu {
+		display: flex;
+		flex: 0;
+	}
+
+	.navbar-menu {
+		flex-direction: column;
+		flex: 100%;
+		margin-block: 1.5rem;
+		display: none;
+	}
+	/************** End of NAVBAR ***************/
+
+	/***************** HOME *******************/
+	#home {
+		height: 100vh;
+	}
+	/************** End of HOME ***************/
 }
