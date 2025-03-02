@@ -7,8 +7,15 @@ const toggleMenu = document.getElementById('toggle-menu') as HTMLButtonElement;
 const navbarMenu = document.querySelector('.navbar-menu') as HTMLUListElement;
 
 toggleMenu?.addEventListener('click', () => {
-	navbar?.classList.toggle('active');
 	navbarMenu?.classList.toggle('show');
+
+	const isAlreadyActive = navbar?.classList.contains('active');
+
+	if (isAlreadyActive && window.scrollY === 0) {
+		navbar?.classList.remove('active');
+	} else if (window.scrollY === 0) {
+		navbar?.classList.add('active');
+	}
 
 	toggleMenu?.querySelectorAll('i').forEach((icon) => {
 		icon?.classList.toggle('hidden');
