@@ -188,6 +188,7 @@ img {
 .grid-2 {
 	grid-template-columns: repeat(2, 1fr);
 	gap: 2.75rem;
+	align-items: center;
 }
 
 .grid-4 {
@@ -240,12 +241,11 @@ img {
 .navbar-menu {
 	display: flex;
 	align-items: center;
-	gap: 1rem;
+	gap: 1.95rem;
 }
 
 .navbar-link {
 	font-weight: var(--bold-fw);
-
 	font-size: var(--lg-fs);
 }
 
@@ -259,10 +259,6 @@ img {
 #home {
 	min-height: calc(100vh - var(--navbar-h));
 	display: flex;
-	align-items: center;
-}
-
-.home-content {
 	align-items: center;
 }
 
@@ -304,6 +300,7 @@ img {
 	left: 20%;
 	top: -12%;
 	z-index: 10;
+	opacity: 0.75;
 }
 
 .home-overview {
@@ -362,10 +359,6 @@ img {
 /************** End of BRANDS ***************/
 
 /***************** FEATURES *******************/
-.features-content {
-	align-items: center;
-}
-
 .feature-list {
 	display: flex;
 	flex-direction: column;
@@ -415,10 +408,6 @@ img {
 /************** End of FEATURES ***************/
 
 /***************** CASE *******************/
-.case-content {
-	align-items: center;
-}
-
 .case-img {
 	filter: var(--white-ds);
 }
@@ -444,7 +433,6 @@ img {
 /***************** PROMOTION *******************/
 .promotion-content {
 	background-color: var(--black-color-20);
-	align-items: center;
 	padding: 1.25rem 2.85rem;
 	border-radius: var(--promo-radius);
 	filter: var(--white-ds);
