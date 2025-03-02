@@ -126,6 +126,20 @@ img {
 	height: auto;
 }
 
+::-webkit-scrollbar {
+	width: 0.6rem;
+	border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: var(--black-color-20);
+	border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: var(--black-color-30);
+}
+
 /***************** Reusable *******************/
 .container {
 	max-width: var(--container-mw);
@@ -666,6 +680,53 @@ img {
 	/************** End of HOME ***************/
 }
 
+@media screen and (max-width: 990px) {
+	/***************** BRAND *******************/
+	.brand-list {
+		flex-wrap: wrap;
+		gap: 1rem;
+		justify-content: center;
+	}
+
+	.brand-item {
+		min-width: 250px;
+		max-width: 20%;
+	}
+	/************** End of BRAND ***************/
+
+	/***************** FEATURES *******************/
+	.features-content {
+		column-gap: 0.25rem;
+	}
+
+	.feature-item {
+		column-gap: 2rem;
+	}
+
+	.feature-item i {
+		grid-column: 1/2;
+	}
+	/************** End of FEATURES ***************/
+}
+
+@media screen and (max-width: 890px) {
+	/***************** Reusable *******************/
+	.grid-4 {
+		grid-template-rows: unset;
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	/***************** PRODUCTS *******************/
+	.product-list {
+		margin-bottom: 3rem;
+	}
+
+	.product-item {
+		min-height: 250px;
+	}
+	/************** End of PRODUCTS ***************/
+}
+
 @media screen and (max-width: 860px) {
 	/***************** Variables *******************/
 	:root {
@@ -736,4 +797,105 @@ img {
 		height: 100vh;
 	}
 	/************** End of HOME ***************/
+
+	/***************** FOOTER *******************/
+	.footer-columns {
+		grid-template-columns: repeat(3, 1fr);
+		row-gap: 2.5rem;
+	}
+
+	.footer-column:nth-child(4) {
+		grid-column: 1/4;
+	}
+	.footer-form {
+		width: 100%;
+		flex-direction: column;
+	}
+
+	.footer-form input {
+		padding-block: 0.85rem;
+		width: 100%;
+	}
+
+	.footer-media {
+		justify-content: center;
+	}
+	/************** End of FOOTER ***************/
+}
+
+@media screen and (max-width: 790px) {
+	/***************** Reusable *******************/
+	.grid-4 {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media screen and (max-width: 750px) {
+	/***************** Reusable *******************/
+	.btn {
+		width: 100%;
+	}
+
+	.grid-2 {
+		grid-template-columns: 100%;
+		text-align: center;
+	}
+
+	/***************** HOME *******************/
+	.home-content {
+		grid-template-columns: 100%;
+		text-align: center;
+		min-height: 100vh;
+	}
+	/************** End of HOME ***************/
+
+	/***************** BRANDS *******************/
+	.brands-content {
+		margin-top: 8rem;
+	}
+
+	.brand-item {
+		max-width: 100%;
+		min-width: 100%;
+	}
+	/************** End of BRANDS ***************/
+
+	/***************** FEATURES *******************/
+	.feature-list {
+		position: absolute;
+		z-index: 20;
+	}
+
+	.feature-item {
+		text-align: left;
+		width: fit-content;
+	}
+
+	.features-img {
+		opacity: 0.25;
+	}
+	/************** End of FEATURES ***************/
+
+	/***************** PROMOTION *******************/
+	.promotion-content {
+		padding-block: 3rem;
+	}
+	/************** End of PROMOTION ***************/
+}
+
+@media screen and (max-width: 576px) {
+	/***************** Reusable *******************/
+	.grid-4 {
+		grid-template-columns: 100%;
+	}
+
+	/***************** FOOTER *******************/
+	.footer-columns {
+		grid-template-columns: 100%;
+	}
+
+	.footer-column:nth-child(4) {
+		grid-column: unset;
+	}
+	/************** End of FOOTER ***************/
 }
