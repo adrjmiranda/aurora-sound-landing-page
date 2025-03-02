@@ -590,7 +590,7 @@ img {
 #credit-area {
 	background-color: var(--white-color-10);
 	color: var(--black-color-10);
-	padding-block: 0.85rem;
+	padding-block: 0.45rem;
 }
 
 .credit {
