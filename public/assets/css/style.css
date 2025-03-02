@@ -115,6 +115,10 @@ button {
 	width: 150%;
 }
 
+:is(a, button) i {
+	pointer-events: none;
+}
+
 img {
 	display: block;
 	max-width: 100%;
@@ -220,6 +224,8 @@ img {
 	left: 0;
 	width: 100%;
 	background-color: transparent;
+	position: relative;
+	z-index: 100;
 }
 
 .navbar-content {
@@ -501,7 +507,83 @@ img {
 /************** End of PRODUCTS ***************/
 
 /***************** FOOTER *******************/
-/* TODO: Create FOOTER style */
+#footer {
+	background-color: var(--black-color-30);
+	margin-top: 5rem;
+}
+
+.footer-columns {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	column-gap: 1.55rem;
+}
+
+.footer-column {
+	display: flex;
+	flex-direction: column;
+	gap: 1.45rem;
+}
+
+.footer-title {
+	font-size: var(--lg-fs);
+}
+
+.footer-list {
+	display: flex;
+	flex-direction: column;
+	gap: 0.85rem;
+}
+
+.footer-link {
+	color: var(--white-color-10);
+	opacity: 0.65;
+	font-size: var(--base-fs);
+}
+
+.footer-link:hover {
+	opacity: 1;
+}
+
+.footer-form {
+	display: flex;
+	gap: 0.85rem;
+}
+
+.footer-form input {
+	border: 1px solid var(--white-color-10);
+	padding-inline: 0.85rem;
+	color: var(--white-color-10);
+	font-size: var(--base-fs);
+}
+
+.footer-form .btn {
+	background-color: var(--black-color-10);
+	border: 1px solid var(--black-color-10);
+}
+
+.footer-form .btn:hover {
+	background-color: var(--black-color-20);
+	border-color: var(--black-color-20);
+}
+
+.footer-media {
+	display: flex;
+	gap: 1rem;
+}
+
+.social-link i {
+	color: var(--white-color-10);
+	background-color: var(--black-color-10);
+	height: 40px;
+	width: 40px;
+	font-size: var(--lg-fs);
+	border-radius: var(--btn-radius);
+	transition: 0.35s ease-in-out;
+}
+
+.social-link:hover i {
+	transform: scale(1.05);
+}
 /************** End of FOOTER ***************/
 
 /***************** CREDIT AREA *******************/
