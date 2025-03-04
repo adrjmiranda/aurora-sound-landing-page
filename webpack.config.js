@@ -17,6 +17,6 @@ module.exports = {
 	},
 	output: {
 		filename: 'index.js',
-		path: path.resolve(__dirname, 'public/assets/js'),
+		path: path.resolve(__dirname, 'assets/js'),
 	},
 };
